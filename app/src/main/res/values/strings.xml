@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GuitarTuner</string>
+    <string name="tab1">Chords</string>
+    <string name="tab2">Collections</string>
+    <string name="tab3">Tuner</string>
+
+</resources>

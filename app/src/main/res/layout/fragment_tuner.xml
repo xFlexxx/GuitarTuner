@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1C2526"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
+    android:gravity="center">
+
+    <!-- Дисплей тюнера -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/tunerPointer"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/triangle_indicator"
+            android:contentDescription="Tuner Pointer"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Контейнер для линии и рисок -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/tunerPointer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+        <!-- Основная линия -->
+            <View
+                android:id="@+id/tunerLine"
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:background="#B0BEC5"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Центральная риска (0) -->
+            <View
+                android:id="@+id/centerMark"
+                android:layout_width="2dp"
+                android:layout_height="25dp"
+                android:background="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Левые риски -->
+            <View
+                android:id="@+id/leftMark20"
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:background="#B0BEC5"
+                android:layout_toLeftOf="@id/centerMark"
+                android:layout_marginRight="150dp"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/leftMark15"
+                android:layout_width="2dp"
+                android:layout_height="18dp"
+                android:background="#B0BEC5"
+                android:layout_toLeftOf="@id/centerMark"
+                android:layout_marginRight="112.5dp"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/leftMark10"
+                android:layout_width="2dp"
+                android:layout_height="18dp"
+                android:background="#B0BEC5"
+                android:layout_toLeftOf="@id/centerMark"
+                android:layout_marginRight="75dp"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/leftMark5"
+                android:layout_width="2dp"
+                android:layout_height="15dp"
+                android:background="#B0BEC5"
+                android:layout_toLeftOf="@id/centerMark"
+                android:layout_marginRight="37.5dp"
+                android:layout_centerVertical="true" />
+
+            <!-- Правые риски -->
+            <View
+                android:id="@+id/rightMark5"
+                android:layout_width="2dp"
+                android:layout_height="15dp"
+                android:background="#B0BEC5"
+                android:layout_toRightOf="@id/centerMark"
+                android:layout_marginLeft="37.5dp"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/rightMark10"
+                android:layout_width="2dp"
+                android:layout_height="18dp"
+                android:background="#B0BEC5"
+                android:layout_toRightOf="@id/centerMark"
+                android:layout_marginLeft="75dp"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/rightMark15"
+                android:layout_width="2dp"
+                android:layout_height="18dp"
+                android:background="#B0BEC5"
+                android:layout_toRightOf="@id/centerMark"
+                android:layout_marginLeft="112.5dp"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/rightMark20"
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:background="#B0BEC5"
+                android:layout_toRightOf="@id/centerMark"
+                android:layout_marginLeft="150dp"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/detectedFrequencyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-- Hz"
+        android:textSize="40sp"
+        android:textColor="#B0BEC5"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/frequencyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target: 82.4 Hz"
+        android:textSize="30sp"
+        android:textColor="#B0BEC5"
+        android:layout_gravity="center" />
+
+    <!-- Фиксированные октавы -->
+    <LinearLayout
+        android:id="@+id/octaveContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/octaveE2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E2"
+            android:textSize="24sp"
+            android:textColor="#B0BEC5"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/octaveA2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A2"
+            android:textSize="24sp"
+            android:textColor="#B0BEC5"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/octaveD3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D3"
+            android:textSize="24sp"
+            android:textColor="#B0BEC5"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/octaveG3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G3"
+            android:textSize="24sp"
+            android:textColor="#B0BEC5"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/octaveB3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B3"
+            android:textSize="24sp"
+            android:textColor="#B0BEC5"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/octaveE4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E4"
+            android:textSize="24sp"
+            android:textColor="#B0BEC5"
+            android:padding="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

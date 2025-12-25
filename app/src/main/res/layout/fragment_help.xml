@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Как пользоваться приложением"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!-- Вкладка Tuner -->
+        <TextView
+            android:text="\nВкладка «Tuner»"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="• Разрешите доступ к микрофону при первом запуске.\n• Выберите струну, в поле Target появится целевая частота выбранной струны. Щипните струну на гитаре - на экране отобразится частота в герцах.\n• Дотягивайте или ослабляйте струну, пока индикатор не окажется в центре (зелёная зона).\n• Повторите для всех струн стандартного строя E A D G B E."
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Вкладка Collections -->
+        <TextView
+            android:text="\nВкладка «Collection»"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="• Здесь показываются только аккорды с лайком.\n • Уберите лайк - аккорд исчезнет из списка, но останется во вкладке Chords."
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!-- Вкладка Chords -->
+        <TextView
+            android:text="\nВкладка «Chords»"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="• В этой вкладке вам доступен для просмотра список основных аппликатур аккордов.\n• Зелёные кружки - открытые струны, красные - заглушённые, цифры в кружках на струнах номера пальцев.\n• Под названием аккорда, если он не играется с первого лада, написан номер лада, с которого начинается аппликатура.\n• Нажмите кнопку лайка, чтобы добавить аппликатуру в коллекцию избранных аккордов."
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
